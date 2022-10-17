@@ -17,3 +17,6 @@ https://gist.github.com/gwalkey/8b53eeec52b1eb627ac7835ac89293c4
 
 SQL Server - Top 100 Worst Performing Queries From Query Store
 https://gist.github.com/gwalkey/3e9b4cc06dd7f0a48b2a01aafb70adef
+
+
+PowerPoint will follow
