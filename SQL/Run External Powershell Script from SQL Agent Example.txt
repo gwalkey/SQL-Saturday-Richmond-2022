@@ -1,4 +1,10 @@
 --- SQL Agent  - Run External Powershell Script
 --- Step Type = Operating System CmdExec
 
-powershell.exe c:\psscripts\RMSFileTransfer.ps1
+--- Posh 5.1
+powershell.exe c:\psscripts\FileTransfer.ps1
+
+or
+
+--- Posh 6+
+pwsh.exe c:\psscripts\FileTransfer.ps1
