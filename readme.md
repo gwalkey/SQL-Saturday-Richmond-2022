@@ -1,3 +1,5 @@
+## https://sqlsaturday.com/2022-10-22-sqlsaturday1036/#schedule
+
 ### Links to all the Code in my 2022 SQL Saturday - Richmond VA Presentation ###
 
 SQL Server - Index Workload Breakdown - CRUD Mix<br>
