@@ -1,4 +1,4 @@
---- Delete DUPE PatientIDs (leave the newest/latest one by Identity Interger order)
+--- Delete DUPE PatientIDs (leave the newest/latest one in Identity Integer order)
 ;WITH CTE AS(
    SELECT [PatientID],ID,
 	   RN = ROW_NUMBER() OVER(PARTITION BY PatientID ORDER BY ID desc)
