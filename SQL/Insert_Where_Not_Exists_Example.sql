@@ -8,9 +8,9 @@ INSERT INTO
 )
 SELECT
     [source].id,
-    [source].guidd,
-    [source].TimeAdded,
-    [source].ExtraData
+    [source].guid,
+    [source].First,
+    [source].Last
 FROM 
 	[source]
 LEFT JOIN 
@@ -18,4 +18,4 @@ LEFT JOIN
 ON 
 	[destination].id = [source].id
 WHERE 
-	[destination].id is null
+	[destination].id is NULL --- KEY Not IN Destination
