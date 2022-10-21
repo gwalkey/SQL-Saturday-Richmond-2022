@@ -3,7 +3,7 @@
 
 ![alt text](https://raw.githubusercontent.com/gwalkey/SQL-Saturday-Richmond-2022/master/SQLSaturday.jpg)
 
-### Links to all the Code mentioned in my SQL Saturday Richmond VA 2022 Presentation ###
+### Links to all the gists mentioned in my SQL Saturday Richmond VA 2022 Presentation ###
 
 SQL Server - Index Workload Breakdown - CRUD Mix<br>
 https://gist.github.com/gwalkey/9a6da12a9b0a8b7b4815ee3db9ef2b65
