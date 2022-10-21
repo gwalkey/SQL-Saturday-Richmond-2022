@@ -11,3 +11,21 @@ SELECT
 INTO dbo.Numbers
 FROM N
 OPTION (MAXDOP 1);
+
+/*
+(1000000 rows affected)
+(16 rows affected)
+(1 row affected)
+
+ SQL Server Execution Times:
+   CPU time = 734 ms,  elapsed time = 764 ms.
+SQL Server parse and compile time: 
+   CPU time = 0 ms, elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+ SQL Server Execution Times:
+   CPU time = 0 ms,  elapsed time = 0 ms.
+
+*/
