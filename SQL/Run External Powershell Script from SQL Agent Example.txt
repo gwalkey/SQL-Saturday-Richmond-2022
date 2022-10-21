@@ -1,0 +1,4 @@
+--- SQL Agent  - Run External Powershell Script
+--- Step Type = Operating System CmdExec
+
+powershell.exe c:\psscripts\RMSFileTransfer.ps1
