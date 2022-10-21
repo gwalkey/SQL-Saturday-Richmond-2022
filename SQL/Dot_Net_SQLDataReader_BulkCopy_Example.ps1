@@ -1,7 +1,13 @@
-# Open a Connection to the SOURCE Database
+# Initialize Variables
+$SourceServer         = 'server.database.windows.net'
+$SourceDatabase       = 'Products'
 
-# Set Source as Azure SQL DB
-$SQLSrcConnString = "Data Source=server.database.windows.net;Initial Catalog=Products;UID=SomeUser;Password=SomePassword;Application Name=Powershell Data Copier;encrypt=yes;Connection Timeout=60"
+$DestinationServer    = 'InternalServer'
+$DestinationDatabase  = 'Products'
+$DestinationTable     = 'Products_Load'
+
+# Open a Connection to the SOURCE Database
+$SQLSrcConnString = "Data Source=$SourceServer;Initial Catalog=$SourceDatabase;UID=SomeUser;Password=SomePassword;Application Name=Powershell Data Copier;encrypt=yes;Connection Timeout=60"
 $SQLSrcCmd        = "SELECT ID,WhenRowAdded FROM dbo.Products order by ID"
 $objSqlSrcConn    = New-Object System.Data.SqlClient.SqlConnection $SQLSrcConnString
 $objSqlSrcCmd     = New-Object System.Data.SqlClient.SqlCommand($SQLSrcCmd, $objSqlSrcConn)
@@ -19,10 +25,10 @@ catch
 [System.Data.SqlClient.SqlDataReader]$SqlReader = $objSqlSrcCmd.ExecuteReader()
 
 # Open a Connection to the DESTINATION Database
-[string]$CnnStrTarget = "Data Source=InternalServer;Integrated Security=SSPI;Initial Catalog=Products;Application Name=PowerShell Bulk Inserter"
+[string]$CnnStrTarget = "Data Source=$DestinationServer;Integrated Security=SSPI;Initial Catalog=$DestinationDatabase;Application Name=PowerShell Bulk Inserter"
 $SqlBulkCopy                      = New-Object -TypeName System.Data.SqlClient.SqlBulkCopy($CnnStrTarget)
 $SqlBulkCopy.EnableStreaming      = $true
-$SqlBulkCopy.DestinationTableName = 'Products_Load'
+$SqlBulkCopy.DestinationTableName = $DestinationTable
 $SqlBulkCopy.BatchSize            = 10000 # rows per batch
 $SqlBulkCopy.BulkCopyTimeout      = 0     # seconds, 0 (zero) = no timeout limit
 
