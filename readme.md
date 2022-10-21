@@ -14,7 +14,7 @@ https://gist.github.com/gwalkey/763d214febb8bf2601b6d32380d02beb
 SQL Server - Extended Events Sessions - DBA Pack<br>
 https://gist.github.com/gwalkey/5628793ed34ad1b5d54ed1a1a92f4780
 
-SQL Server - What's running Now with Query Plans<br>
+SQL Server - Show What's running Now with Query Plans<br>
 https://gist.github.com/gwalkey/3969e5b4389b67987eead7e9e36fb9f4
 
 SQL Server - Show Current Locks<br>
